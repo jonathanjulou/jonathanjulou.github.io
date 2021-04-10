@@ -1,13 +1,5 @@
-.visibledevice {display:none;}
-.visibledesktop {display:display;}
-
-@media (max-width : 320px) {
-    .visibledevice {display:block;}
-    .visibledesktop {display:none;}
-}
-
 html {
-  font-size: 16px;
+  font-size: 1vw;
   font-family: 'Liberation Sans', sans-serif;
   background-color: rgb(240, 240, 256);
 }
