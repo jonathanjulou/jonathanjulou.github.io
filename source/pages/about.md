@@ -133,5 +133,9 @@ Participation aux olympiades des mathématiques en 2015.
 ________________________________________________________________________________________________________________________
 [endparagraph]
 
+[startparagraph]
+Built with Material Design Lite
+[endparagraph]
+
 [endgrid]
 [endtextbox]
