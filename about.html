@@ -1,116 +1,170 @@
 <!doctype html>
-<html>
-  <head>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <title>Jonathan Julou - About</title>
-    <link rel="stylesheet" href="./style/style.css">
-  </head>
-  <body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>MDL-Static Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
 
-    <header>
-      <h2>Jonathan Julou</h2>
-      <h3><a href="./index.html">Home</a></h3>
-      <h3><a href="./school_projects.html">School Projects</a></h3>
-      <h3><a href="./perso_projects.html">Personal Projects</a></h3>
-      <h3 style="color: rgb(0,180,100)">About</h3>
-    </header>
 
-    <div>
-      <section>
-        <h6>
-          ________________________________________________________________________________________________________________________
-          <br> I study computer science and applied mathematics, with a special interest for computer graphics and animation.
-          <br> I am currently a third year student at Grenoble INP - Ensimag, a french engineering school. (bac+5)
-          <br>
-          <br> In my free time I play the flute or piano, sculpt / model / animate in Blender, or do digital painting.
-          <br>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 
-          <br>________________________________________________________________________________________________________________________
-          <br> Main Programming Languages (in order of proficiency):
-          <br>  - Python
-          <br>  - C++
-          <br>  - C
-          <br>  - Java
-          <br>  - LUA
-          <br>  - Rust
-          <br>  - R
-          <br>  - OCaml
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">Jonathan Julou</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link" href="music.html">Music</a><a class="mdl-navigation__link" href="drawing.html">Drawings</a><a class="mdl-navigation__link is-active" href="about.html">About</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link" href="music.html">Music</a><a class="mdl-navigation__link" href="drawing.html">Drawings</a><a class="mdl-navigation__link is-active" href="about.html">About</a>
+            </nav>
+        </div>
+<main class="mdl-layout__content">
+<div class="mdl-grid portfolio-max-width">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+<div class="mdl-card__title">
+<h2 class="mdl-card__title-text"> About</h2>
+</div>
+<div class="mdl-card__media">
+<img class="article-image" src=" images/about-header.jpg" border="0" alt="">
+</div><div class="mdl-grid portfolio-copy">
+<h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"> Profile</h3>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+I am currently a camera tracking R&D Engineer at <a href=https://miraxyz.com/>Miraxyz</a>. This position involves writing lens calibration solvers and 3D pose estimators and filters.
+</div>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+I studied computer science and applied mathematics at Grenoble INP - Ensimag, with special interests for sensor fusion, computer vision, optimization algorithms, program proving, computer graphics and animation. I graduated in 2022 with an Engineer's degree (bac+5).
+</div>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+In my free time I mainly play music, draw or do stuff in Blender.
+</div>
+</div>
+<div class="mdl-grid portfolio-copy">
+<h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Resume</h3>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> R&D Engineer at Miraxyz</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> April 2022 - Today</h6>
+<br>The products I work on are the real-time tracking aggregator EZtrack, the lens calibration software EZprofile, and the hand-eye solver EZlineup.
+<br>Beyond day to day development, I also explore the state of the art of sensor fusion algorithms for future implementation in EZtrack.
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> R&D Intern at Miraxyz</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> October 2021 - April 2022</h6>
+<br>Alignment and sensor fusion between an external low-drift IMU and a preexisting tracking system to reduce orientation jitter.
+<br>Parametrization of the RBF for the interpolation of 2D lens curves using virtual measurements.
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Exchange Semester at EPFL</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> Spring 2021</h6>
+<br>Courses taken:
+<br>- MATH-512 Optimization on Manifolds
+<br>- CS-413 Computational Photography
+<br>- CS-440 Advanced Computer Graphics
+<br>- CS-450 Advanced algorithms
+<br>- CS-526 Learning Theory
+<br>- MICRO-512 Image Processing II
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Grenoble INP - Ensimag 3A MMIS</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> Autumn 2021</h6>
+<br>Courses taken:
+<br>- Introduction à la Vision par Ordinateur
+<br>- Modélisation Surfacique
+<br>- Ingénierie de l'Animation 3D
+<br>- Synthèse d'Image et Animation
+<br>- Calcul sur GPU
+<br>- Comprendre les Données Visuelles à Grande Echelle
+<br>- Génie Logiciel
+<br>- Multimédia
+<br>- Traitement d'Image Avancé
+<br>- Méthodes level set et algorithmes d'optimisation
+<br>- Ondelettes et applications au traitement d'image
+<br>- Pattern Recognition and Machine Learning
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Research Intern at IMT Atlantique</h5>
+<h5 class="mdl-cell mdl-cell--12-col"> Micro-wave department</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> June 2020 - August 2020</h6>
+<br>Investigating how to improve vehicle position precision by combining GNSS and dual wheel odometry data.
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Research Intern at Inria Montbonnot</h5>
+<h5 class="mdl-cell mdl-cell--12-col"> SPADES team</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> July 2019 - August 2019</h6>
+<br>Coq proofs for time bounds on messages exchange in a theoretical network.
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Grenoble INP - Ensimag</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> 2019 - 2022</h6>
+<br>2022 - Model Inference Proofs
+<br>Application of the B method to a model inferring algorithm.
+<br>Optional introduction to laboratory research semester project done under the supervision of
+Akram Idani and Roland Groz
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Lycée Chateaubriand, Rennes</h5>
+<h6 class="mdl-cell mdl-cell--12-col"> 2017 - 2018</h6>
+________________________________________________________________________________________________________________________
+</div>
+<br><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Lycée Pavie, Guingamp</h5>
+<br>Obtention du Bac mention TB en 2016.
+<br>Participation aux olympiades des mathématiques en 2015.
+________________________________________________________________________________________________________________________
+</div>
+<br></div>
+<br></div>
+</div>
+</main>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
 
-          <br>________________________________________________________________________________________________________________________
-          <br> Selection of softwares I am familiar with (unordered):
-          <br>  - Autodesk Maya
-          <br>  - Blender
-          <br>  - Coq proof assistant
-          <br>  - Git
-          <br>  - Latex
-          <br>  - Linux
-          <br>  - Matlab
-          <br>  - OpenCV
-          <br>  - Python machine learning libraries
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Jonathan Julou</div>
 
-          <br>________________________________________________________________________________________________________________________
-          <br> Internships:
-          <br>  - IMT Atlantique, micro-wave department, June 2020 - August 2020
-          <br>  - - Vehicle position improvement by combining GNSS and inertial data
-          <br>
-          <br>  - Inria Montbonnot, SPADES team, July 2019 - August 2019
-          <br>  - - Coq proofs for time bounds on messages exchange in a network
+                    <a href="https://github.com/jonathanjulou"><img src="./images/gh.png" alt="github" style="width:32px;height:32px;padding: 0 0 0 20px;"></img></a>
+                    <a href="mailto:jonathan.julou@protonmail.com">
+                    <img src="./images/mail.png" alt="mail" style="width:48px;height:32px;padding: 0 0 0 20px;"></img>
+                    </a>
 
-          <br>________________________________________________________________________________________________________________________
-          <br> EPFL spring 2021 exchange semester courses taken:
-          <br>  - CS-413 Computational Photography
-          <br>  - CS-440 Advanced Computer Graphics
-          <br>  - CS-450 Advanced algorithms
-          <br>  - CS-526 Learning Theory
-          <br>  - MICRO-512 Image Processing II
-          <br>  - MATH-512 Optimization on Manifolds
-
-          <br>________________________________________________________________________________________________________________________
-          <br> Grenoble INP - Ensimag 2021 MMIS autumn semester courses taken:
-          <br>  - Introduction à la Vision par Ordinateur
-          <br>  - Modélisation Surfacique
-          <br>  - Ingénierie de l'Animation 3D
-          <br>  - Synthèse d'Image et Animation
-          <br>  - Calcul sur GPU
-          <br>  - Comprendre les Données Visuelles à Grande Echelle
-          <br>  - Génie Logiciel
-          <br>  - Multimédia
-          <br>  - Traitement d'Image Avancé
-          <br>  - Méthodes level set et algorithmes d'optimisation avec application au traitement d'image
-          <br>  - Ondelettes et applications au traitement d'image
-          <br>  - Pattern Recognition and Machine Learning
-
-          <br>________________________________________________________________________________________________________________________
-          <br> Grenoble INP - Ensimag 2020 : filière MMIS
-          <br> Grenoble INP - Ensimag 2019
-          <br> Lycée Chateaubriand, Rennes : classe préparatoire MPSI-MP  2017, 2018
-        </h6>
-      </section>
-
-    <section>
-      <img src="./assets/pfp.jpg" alt="photo" style="width:128px;height:185px;"></img>
-    </section>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                  <p>
+                    Built with Material Design Lite
+                  </p>
+                </div>
+            </footer>
+        </main>
     </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
 
-
-
-    <footer>
-      <a href="https://www.linkedin.com/in/jonathan-julou-288a2220a/">
-      <img src="./assets/in.png" alt="linkedin" style="width:32px;height:32px;padding: 0 0 0 20px;"></img>
-      </a>
-
-      <a href="https://github.com/jonathanjulou">
-      <img src="./assets/gh.png" alt="github" style="width:32px;height:32px;padding: 0 0 0 20px;"></img>
-      </a>
-
-      <a href="https://www.youtube.com/channel/UCifMe8JfVRFYAmBsFHxcuLQ/videos">
-      <img src="./assets/yt.png" alt="youtube" style="width:48px;height:32px;padding: 0 0 0 20px;"></img>
-      </a>
-
-      <a href="mailto:jonathan.julou@grenoble-inp.org">
-      <img src="./assets/mail.png" alt="mail" style="width:48px;height:32px;padding: 0 0 0 20px;"></img>
-      </a>
-    </footer>
-
-  </body>
 </html>
