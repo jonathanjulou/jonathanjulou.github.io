@@ -338,31 +338,31 @@ body {
 }
 @media (min-width:961px)  {
   video {
-    width: 960px;
-    height: 540px;
+    width: 854px;
+    height: 480px;
   }
   .video-card {
-    width: 960px;
-    height: 540px;
+    width: 854px;
+    height: 480px;
   }
 }
 @media (min-width:1025px) {
   video {
-    width: 1024px;
-    height: 576px;
+    width: 854px;
+    height: 480px;
   }
   .video-card {
-    width: 1024px;
-    height: 576px;
+    width: 854px;
+    height: 480px;
   }
 }
 @media (min-width:1281px) {
   video {
-    width: 1024px;
-    height: 576px;
+    width: 854px;
+    height: 480px;
   }
   .video-card {
-    width: 1024px;
-    height: 576px;
+    width: 854px;
+    height: 480px;
   }
 }

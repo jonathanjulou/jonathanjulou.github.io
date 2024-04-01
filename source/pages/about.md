@@ -24,8 +24,6 @@ The products I work on are the real-time tracking aggregator EZtrack, the lens c
 Beyond day to day development, I also explore the state of the art of sensor fusion algorithms for future implementation in EZtrack.
 
 [endparagraph]
-[endgrid]
-[startgrid]
 [startparagraph]
 #### R&D Intern at Miraxyz
 ##### October 2021 - April 2022
@@ -36,8 +34,7 @@ Alignment and sensor fusion between an external low-drift IMU and a preexisting 
 Parametrization of the RBF for the interpolation of 2D lens curves using virtual measurements.
 
 [endparagraph]
-[endgrid]
-[startgrid]
+
 [startparagraph]
 #### Exchange Semester at EPFL
 ##### Spring 2021
@@ -58,8 +55,7 @@ Courses taken:
 - MICRO-512 Image Processing II
 
 [endparagraph]
-[endgrid]
-[startgrid]
+
 [startparagraph]
 #### Grenoble INP - Ensimag 3A MMIS
 ##### Autumn 2021
@@ -92,8 +88,7 @@ Courses taken:
 - Pattern Recognition and Machine Learning
 
 [endparagraph]
-[endgrid]
-[startgrid]
+
 [startparagraph]
 #### Research Intern at IMT Atlantique
 #### Micro-wave department
@@ -103,8 +98,7 @@ Courses taken:
 Investigating how to improve vehicle position precision by combining GNSS and dual wheel odometry data.
 
 [endparagraph]
-[endgrid]
-[startgrid]
+
 [startparagraph]
 #### Research Intern at Inria Montbonnot
 #### SPADES team
@@ -114,8 +108,7 @@ Investigating how to improve vehicle position precision by combining GNSS and du
 Coq proofs for time bounds on messages exchange in a theoretical network.
 
 [endparagraph]
-[endgrid]
-[startgrid]
+
 [startparagraph]
 #### Grenoble INP - Ensimag
 ##### 2019 - 2022
@@ -129,8 +122,7 @@ Optional introduction to laboratory research semester project done under the sup
 Akram Idani and Roland Groz
 
 [endparagraph]
-[endgrid]
-[startgrid]
+
 [startparagraph]
 #### Prepa MPSI - MP
 #### Lycée Chateaubriand, Rennes
@@ -147,8 +139,7 @@ Obtention du Bac mention TB en 2016.
 Participation aux olympiades des mathématiques en 2015.
 
 [endparagraph]
-[endgrid]
-[startgrid]
+
 [startparagraph]
 Built with Material Design Lite
 [endparagraph]

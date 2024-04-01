@@ -29,6 +29,11 @@ def textbox_parse(md_content):
             body += '<div class="mdl-card__media">\n<img class="article-image" src=" {}" border="0" alt="">\n</div>'.format(image_path)
             continue
 
+        if line.startswith("[video]"):
+            image_path = line.split("(")[1].split(")")[0]
+            body += '<div class="video-card mdl-card__media">\n<video controls><source src=" {}" type="video/mp4">Your browser does not support the video tag.</video>\n</div>'.format(image_path)
+            continue
+
         if line.startswith("[startgrid]"):
             body += '<div class="mdl-grid portfolio-copy">\n'
             continue
