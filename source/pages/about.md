@@ -18,27 +18,31 @@ In my free time I mainly play music, draw or do stuff in Blender.
 [startparagraph]
 #### R&D Engineer at Miraxyz
 ##### April 2022 - Today
-
-The products I work on are the real-time tracking aggregator EZtrack, the lens calibration software EZprofile, and the hand-eye solver EZlineup.
-
-Beyond day to day development, I also explore the state of the art of sensor fusion algorithms for future implementation in EZtrack.
-________________________________________________________________________________________________________________________
 [endparagraph]
+[startparagraph]
+The products I work on are the real-time tracking aggregator EZtrack, the lens calibration software EZprofile, and the hand-eye solver EZlineup.
+Beyond day to day development, I also explore the state of the art of sensor fusion algorithms for future implementation in EZtrack.
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
 #### R&D Intern at Miraxyz
 ##### October 2021 - April 2022
-
+[endparagraph]
+[startparagraph]
 Alignment and sensor fusion between an external low-drift IMU and a preexisting tracking system to reduce orientation jitter.
 
 Parametrization of the RBF for the interpolation of 2D lens curves using virtual measurements.
-________________________________________________________________________________________________________________________
-[endparagraph]
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
 #### Exchange Semester at EPFL
 ##### Spring 2021
-
+[endparagraph]
+[startparagraph]
 Courses taken:
 
 - MATH-512 Optimization on Manifolds
@@ -52,13 +56,15 @@ Courses taken:
 - CS-526 Learning Theory
 
 - MICRO-512 Image Processing II
-________________________________________________________________________________________________________________________
-[endparagraph]
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
 #### Grenoble INP - Ensimag 3A MMIS
 ##### Autumn 2021
-
+[endparagraph]
+[startparagraph]
 Courses taken:
 
 - Introduction à la Vision par Ordinateur
@@ -84,55 +90,65 @@ Courses taken:
 - Ondelettes et applications au traitement d'image
 
 - Pattern Recognition and Machine Learning
-________________________________________________________________________________________________________________________
-[endparagraph]
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
 #### Research Intern at IMT Atlantique
 #### Micro-wave department
 ##### June 2020 - August 2020
-
-Investigating how to improve vehicle position precision by combining GNSS and dual wheel odometry data.
-________________________________________________________________________________________________________________________
 [endparagraph]
+[startparagraph]
+Investigating how to improve vehicle position precision by combining GNSS and dual wheel odometry data.
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
 #### Research Intern at Inria Montbonnot
 #### SPADES team
 ##### July 2019 - August 2019
-
-Coq proofs for time bounds on messages exchange in a theoretical network.
-________________________________________________________________________________________________________________________
 [endparagraph]
+[startparagraph]
+Coq proofs for time bounds on messages exchange in a theoretical network.
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
 #### Grenoble INP - Ensimag
 ##### 2019 - 2022
-
+[endparagraph]
+[startparagraph]
 2022 - Model Inference Proofs
 
 Application of the B method to a model inferring algorithm.
 
 Optional introduction to laboratory research semester project done under the supervision of
 Akram Idani and Roland Groz
-________________________________________________________________________________________________________________________
-[endparagraph]
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
+#### Prepa MPSI - MP
 #### Lycée Chateaubriand, Rennes
 ##### 2017 - 2018
-________________________________________________________________________________________________________________________
 [endparagraph]
 
 [startparagraph]
 #### Lycée Pavie, Guingamp
+[endparagraph]
+[startparagraph]
 
 Obtention du Bac mention TB en 2016.
 
 Participation aux olympiades des mathématiques en 2015.
-________________________________________________________________________________________________________________________
-[endparagraph]
 
+[endparagraph]
+[endgrid]
+[startgrid]
 [startparagraph]
 Built with Material Design Lite
 [endparagraph]

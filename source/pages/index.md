@@ -4,7 +4,6 @@
 ### Welcome
 [startparagraph]
 To my portfolio/blog website.
-________________________________________________________________________________________________________________________
 [endparagraph]
 
 [startparagraph]
