@@ -26,6 +26,8 @@ Prelude and Fugue 2 - WTC Book 1 - Bach
 ________________________________________________________________________________________________________________________________________________________________________________________
 [endparagraph]
 [video](images/music/impro_rythme.mp4)
+[startparagraph]
+[endparagraph]
 [video](images/music/orgue_impro.mp4)
 [endgrid]
 [endtextbox]

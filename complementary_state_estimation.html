@@ -1,0 +1,125 @@
+<!doctype html>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Jonathan Julou's portfolio website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Jonathan Julou</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">Jonathan Julou</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link" href="blog.html">Blog</a><a class="mdl-navigation__link" href="projects.html">Projects</a><a class="mdl-navigation__link" href="music.html">Music</a><a class="mdl-navigation__link" href="drawing.html">Drawings</a><a class="mdl-navigation__link" href="about.html">About</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link" href="blog.html">Blog</a><a class="mdl-navigation__link" href="projects.html">Projects</a><a class="mdl-navigation__link" href="music.html">Music</a><a class="mdl-navigation__link" href="drawing.html">Drawings</a><a class="mdl-navigation__link" href="about.html">About</a>
+            </nav>
+        </div>
+<main class="mdl-layout__content">
+<div class="mdl-grid portfolio-max-width">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+<div class="mdl-grid portfolio-copy">
+<h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"> Compensating the latency issue in complementary filters with basic differential state estimation</h3>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<br><h5 class="mdl-cell mdl-cell--12-col"> Presentation of the complementary filter</h5>
+<br>Let two sensors \(X\) and \(Y\) giving measurements \(x\) and \(y\) on the same quantity \(q\).
+<br><br>\(X\) is assumed to have a drift free noise model, which means the average of the noise over some period of time is zero. This is the case for zero-mean gaussian noise. However it has a lot of jitter, or high frequency noise, and potentially updates less frequently than \(Y\).
+<br><br>\(Y\) is assumed to have a drifting noise model, which means there is an error changing over long periods of time. This could result from random march in integrated sensor measurements like rotation estimation from a sole gyroscope. However its high frequency noise is very small compared to that of \(X\).
+<br><br>The complementary filter uses the idea that a signal can be decomposed as a low-frequency and a high-frequency components:
+<br>\[x = x_{low frequency} + x_{high frequency}\]
+\[y = y_{low frequency} + y_{high frequency}\]
+<br>And if the cutoff frequency is the same for both signals, is becomes possible to exchange them. The complementary filter would thus estimate \(q\) by replacing the drifting low-frequency component of \({y}\) by the non-drifting low-frequency component \({x}\), while the less jittery high frequency of sensor \(Y\) is kept:
+<br>\[\hat{q} = x_{low frequency} + y_{high frequency}\]
+<br>We denote the low frequency components as \(\bar{x}\) and \(\bar{y}\). The same low-pass filter of smoothing parameter \(\alpha\) is applied to both signals:
+<br>\[\bar{x}^{n+1} = \alpha(\bar{x}^{n}) + (1-\alpha)(x^{n+1}) \]
+\[\bar{y}^{n+1} = \alpha(\bar{y}^{n}) + (1-\alpha)(y^{n+1}) \]
+<br>And the state estimate \(\hat{q}\) is obtained with
+<br>\[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n})\]
+<br><h5 class="mdl-cell mdl-cell--12-col"> Basic complementary filter example</h5>
+<br>Values are simulated with the following noise models:
+<br>\[x^n = q + G(1, 0) \]
+\[y^n = q + G(0.05, 0) + 4\sin(n/120) \]
+<br>The measurements \(x\) and \(y\) and the ground truth \(q\) are plotted below:
+<br><br><div class="mdl-card__media">
+<img class="article-image" src=" images/blog/complementary/qxy.png" border="0" alt="">
+</div><br>When the complementary filter is applied, as \(\alpha\) gets larger an offset between the ground truth and the estimate appears:
+<br><br><div class="mdl-card__media">
+<img class="article-image" src=" images/blog/complementary/basic.png" border="0" alt="">
+</div><br>This is due to the fact that the filter is applied at the end of the low-pass filtering window. The average only takes into account the values before instant \(n\) so it is biased and doesn't account for the fact that the drift of \(Y\) grows with \(n\). Even worse, that drift is not a linear function of n, so the rate of change is not constant over time.
+<br><br><h5 class="mdl-cell mdl-cell--12-col"> Introducing derivatives in the state estimate</h5>
+<br>Taking inspiration from the state estimates used with kalman filtering, it is possible to modify \(x\) and \(y\) into \(\mathbf{x}\) and \(\mathbf{y}\) :
+<br>\[\mathbf{x} = (x, \frac{dx}{dn}, \frac{d²x}{dn²}, ... ) \]
+<br>Getting derivatives is complicated with the low-pass filter we used, but it is possible to get the difference between the average and the current value at each \(n\):
+<br>\[\Delta x^n = x^n - \bar{x}^n \]
+\[\Delta² x^n = \Delta x^n - \bar{\Delta x}^n \]
+\[...\]
+<br>Which is are measures of the growth of \(x\) in the latency window of the filter, abstracting the notion of time. The state estimate becomes:
+<br>\[\mathbf{x} = (x, \Delta x, \Delta² x, ... ) \]
+<br>And the final estimate of \(q\):
+<br>\[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n}) + (\bar{\Delta x}^{n} - \bar{\Delta y}^{n}) + (\bar{\Delta² x}^{n} - \bar{\Delta² y}^{n}) + ...\]
+<br><br><br><h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 1</h5>
+<br><div class="mdl-card__media">
+<img class="article-image" src=" images/blog/complementary/derivative.png" border="0" alt="">
+</div><br>The estimate sticks more with the tendency of sensor \(X\).
+<br><h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 2</h5>
+<br><div class="mdl-card__media">
+<img class="article-image" src=" images/blog/complementary/2derivatives.png" border="0" alt="">
+</div><br>The estimate becomes disturbed by small scale variations in \(x\).
+<br><br>So like when designing Kalman filters, estimating derivatives too far can reduce the performances of the filter.
+<br></div>
+</div>
+<br></div>
+</div>
+</main>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Jonathan Julou</div>
+
+
+
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                  <p>
+                    <a href="https://github.com/jonathanjulou"><img src="./images/gh.png" alt="github" style="width:32px;height:32px;padding: 0 0 0 20px;"></img></a>
+                    <a href="mailto:jonathan.julou@protonmail.com"><img src="./images/mail.png" alt="mail" style="width:48px;height:32px;padding: 0 0 0 20px;"></img></a>
+                  </p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

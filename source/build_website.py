@@ -16,9 +16,13 @@ shutil.copy("./styles.css", OUTPUT_DIR)
 
 #PAGES = list(os.listdir(PAGES_DIR))
 PAGES = {"index.md": "Home",
+         "blog.md" : "Blog",
+         "projects.md" : "Projects",
          "music.md": "Music",
          "drawing.md": "Drawings",
-         "about.md": "About"}
+         "about.md": "About",
+         "nori.md": None,
+         "complementary_state_estimation.md" : None}
 
 
 def parse_md(md_txt):
@@ -68,6 +72,39 @@ def parse_md(md_txt):
                 body += videobox_html
                 continue
 
+            if line.startswith("[portfolioboxnolinknoimage]"):
+                title, content = line.split("(")[1].split(")")[0].split(";")
+                with open("./portfolioboxnolinknoimage.html", "r") as f_in:
+                    portfoliobox_html = f_in.read().replace("TITLE_TEXT", title).replace("CONTENT_TEXT", content)
+                body += portfoliobox_html
+                continue
+
+            if line.startswith("[portfolioboxnoimage]"):
+                title, content, link = line.split("(")[1].split(")")[0].split(";")
+                with open("./portfolioboxnoimage.html", "r") as f_in:
+                    portfoliobox_html = f_in.read().replace("TITLE_TEXT", title).replace("CONTENT_TEXT", content).replace("CONTENT_LINK", link)
+                body += portfoliobox_html
+                continue
+
+            if line.startswith("[portfolioboxnolink]"):
+                title, content, imagepath = line.split("(")[1].split(")")[0].split(";")
+                with open("./portfolioboxnolink.html", "r") as f_in:
+                    portfoliobox_html = f_in.read().replace("TITLE_TEXT", title).replace("CONTENT_TEXT", content).replace("IMAGE_PATH", imagepath)
+                body += portfoliobox_html
+                continue
+
+            if line.startswith("[portfoliobox]"):
+                title, content, imagepath, link = line.split("(")[1].split(")")[0].split(";")
+                with open("./portfoliobox.html", "r") as f_in:
+                    portfoliobox_html = f_in.read().replace("TITLE_TEXT", title).replace("CONTENT_TEXT", content).replace("IMAGE_PATH", imagepath).replace("CONTENT_LINK", link)
+                body += portfoliobox_html
+                continue
+
+            if line.startswith("[html]"):
+                html_content = line.split("(")[1].split(")")[0]
+                body += html_content
+                continue
+
     return body+"</main>\n"
 
 
@@ -84,10 +121,11 @@ if __name__ == "__main__":
                 # adjust the navigation manu un the header
                 navigation = ""
                 for other_page in PAGES:
-                    if other_page == page:
-                        navigation += '<a class="mdl-navigation__link is-active" href="{}">{}</a>'.format(page.replace(".md", ".html"), PAGES[page])
-                    else:
-                        navigation += '<a class="mdl-navigation__link" href="{}">{}</a>'.format(other_page.replace(".md", ".html"), PAGES[other_page])
+                    if PAGES[other_page] is not None:
+                        if other_page == page:
+                            navigation += '<a class="mdl-navigation__link is-active" href="{}">{}</a>'.format(page.replace(".md", ".html"), PAGES[page])
+                        else:
+                            navigation += '<a class="mdl-navigation__link" href="{}">{}</a>'.format(other_page.replace(".md", ".html"), PAGES[other_page])
 
                 header = header.replace("NAVIGATION", navigation)
 
