@@ -63,7 +63,9 @@
 \[\bar{y}^{n+1} = \alpha(\bar{y}^{n}) + (1-\alpha)(y^{n+1}) \]
 <br>And the state estimate \(\hat{q}\) is obtained with
 <br>\[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n})\]
-<br><h5 class="mdl-cell mdl-cell--12-col"> Basic complementary filter example</h5>
+<br></div>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Basic complementary filter example</h5>
 <br>Values are simulated with the following noise models:
 <br>\[x^n = q + G(1, 0) \]
 \[y^n = q + G(0.05, 0) + 4\sin(n/120) \]
@@ -74,7 +76,9 @@
 <br><br><div class="mdl-card__media">
 <img class="article-image" src=" images/blog/complementary/basic.png" border="0" alt="">
 </div><br>This is due to the fact that the filter is applied at the end of the low-pass filtering window. The average only takes into account the values before instant \(n\) so it is biased and doesn't account for the fact that the drift of \(Y\) grows with \(n\). Even worse, that drift is not a linear function of n, so the rate of change is not constant over time.
-<br><br><h5 class="mdl-cell mdl-cell--12-col"> Introducing derivatives in the state estimate</h5>
+<br></div>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Introducing derivatives in the state estimate</h5>
 <br>Taking inspiration from the state estimates used with kalman filtering, it is possible to modify \(x\) and \(y\) into \(\mathbf{x}\) and \(\mathbf{y}\) :
 <br>\[\mathbf{x} = (x, \frac{dx}{dn}, \frac{d²x}{dn²}, ... ) \]
 <br>Getting derivatives is complicated with the low-pass filter we used, but it is possible to get the difference between the average and the current value at each \(n\):
@@ -85,11 +89,15 @@
 <br>\[\mathbf{x} = (x, \Delta x, \Delta² x, ... ) \]
 <br>And the final estimate of \(q\):
 <br>\[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n}) + (\bar{\Delta x}^{n} - \bar{\Delta y}^{n}) + (\bar{\Delta² x}^{n} - \bar{\Delta² y}^{n}) + ...\]
-<br><br><br><h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 1</h5>
+<br><br></div>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 1</h5>
 <br><div class="mdl-card__media">
 <img class="article-image" src=" images/blog/complementary/derivative.png" border="0" alt="">
 </div><br>The estimate sticks more with the tendency of sensor \(X\).
-<br><h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 2</h5>
+<br></div>
+<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 2</h5>
 <br><div class="mdl-card__media">
 <img class="article-image" src=" images/blog/complementary/2derivatives.png" border="0" alt="">
 </div><br>The estimate becomes disturbed by small scale variations in \(x\).

@@ -32,6 +32,8 @@ And the state estimate \(\hat{q}\) is obtained with
 
 \[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n})\]
 
+[endparagraph]
+[startparagraph]
 #### Basic complementary filter example
 
 Values are simulated with the following noise models:
@@ -51,7 +53,8 @@ When the complementary filter is applied, as \(\alpha\) gets larger an offset be
 
 This is due to the fact that the filter is applied at the end of the low-pass filtering window. The average only takes into account the values before instant \(n\) so it is biased and doesn't account for the fact that the drift of \(Y\) grows with \(n\). Even worse, that drift is not a linear function of n, so the rate of change is not constant over time.
 
-
+[endparagraph]
+[startparagraph]
 #### Introducing derivatives in the state estimate
 
 Taking inspiration from the state estimates used with kalman filtering, it is possible to modify \(x\) and \(y\) into \(\mathbf{x}\) and \(\mathbf{y}\) :
@@ -73,13 +76,16 @@ And the final estimate of \(q\):
 \[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n}) + (\bar{\Delta x}^{n} - \bar{\Delta y}^{n}) + (\bar{\Delta² x}^{n} - \bar{\Delta² y}^{n}) + ...\]
 
 
-
+[endparagraph]
+[startparagraph]
 #### Simulation at order 1
 
 [image](images/blog/complementary/derivative.png)
 
 The estimate sticks more with the tendency of sensor \(X\).
 
+[endparagraph]
+[startparagraph]
 #### Simulation at order 2
 
 [image](images/blog/complementary/2derivatives.png)

@@ -12,6 +12,7 @@
 
 .mdl-cell{
   background: rgba(0, 0, 0, 0);
+  margin: auto auto 10px;
 }
 
 .mdl-card{
