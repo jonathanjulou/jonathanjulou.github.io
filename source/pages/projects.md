@@ -32,9 +32,13 @@
 [endgrid]
 [startgrid]
 
+[portfoliobox](Avali 3D Model + Rig; ; images/projects/avali3D/untitled2.jpg; avali3D.html)
+
 [portfoliobox](VTuber Model V2; refined vtuber rig of for a friend.<br><br> Improvements from V1:<br>- modified dlib facial features detector for more expressivity compared to the stiffer mediapipe face mesh used in V1<br>- formulation as a simplex problem solved in real-time to find the best blend shape weights for given facial landmarks compared to a set of calibration examples<br>- communiacte through UDP between mocap script and rig script to spread the load on multiple CPU cores or machines<br>- 3D illusion using lattices on 2D planes instead of 3D model to look more like state of the art vtubers<br>- each 2D layer is digitally painted manually in Krita; images/projects/vtuber2.jpg; https://youtu.be/6etuwBGYHJg)
 
 [portfoliobox](Pix'Art movie; Animated 3D short film made with some friends for fun during associative campaigns at Ensimag; images/projects/project_0_thumbnail.jpg; https://www.youtube.com/watch?v=nmFddkE5Y38)
+
+[portfoliobox](Tablet Theremin; Python script to use a pen tablet as a musical instrument; images/projects/ThereminTablet/therem2.png; theremtablet.html)
 
 [portfolioboxnolink](VTuber Model V1; 3D model + rig of the upper body for real-time control through a python plugin in Blender; images/projects/vtuber1.jpg)
 

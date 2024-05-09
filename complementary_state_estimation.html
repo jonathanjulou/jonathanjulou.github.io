@@ -48,7 +48,7 @@
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
 <div class="mdl-grid portfolio-copy">
 <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"> Compensating the latency issue in complementary filters with basic differential state estimation</h3>
-<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<div class="mdl-card__supporting-text no-padding ">
 <br><h5 class="mdl-cell mdl-cell--12-col"> Presentation of the complementary filter</h5>
 <br>Let two sensors \(X\) and \(Y\) giving measurements \(x\) and \(y\) on the same quantity \(q\).
 <br><br>\(X\) is assumed to have a drift free noise model, which means the average of the noise over some period of time is zero. This is the case for zero-mean gaussian noise. However it has a lot of jitter, or high frequency noise, and potentially updates less frequently than \(Y\).
@@ -64,7 +64,7 @@
 <br>And the state estimate \(\hat{q}\) is obtained with
 <br>\[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n})\]
 <br></div>
-<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<div class="mdl-card__supporting-text no-padding ">
 <h5 class="mdl-cell mdl-cell--12-col"> Basic complementary filter example</h5>
 <br>Values are simulated with the following noise models:
 <br>\[x^n = q + G(1, 0) \]
@@ -77,7 +77,7 @@
 <img class="article-image" src=" images/blog/complementary/basic.png" border="0" alt="">
 </div><br>This is due to the fact that the filter is applied at the end of the low-pass filtering window. The average only takes into account the values before instant \(n\) so it is biased and doesn't account for the fact that the drift of \(Y\) grows with \(n\). Even worse, that drift is not a linear function of n, so the rate of change is not constant over time.
 <br></div>
-<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<div class="mdl-card__supporting-text no-padding ">
 <h5 class="mdl-cell mdl-cell--12-col"> Introducing derivatives in the state estimate</h5>
 <br>Taking inspiration from the state estimates used with kalman filtering, it is possible to modify \(x\) and \(y\) into \(\mathbf{x}\) and \(\mathbf{y}\) :
 <br>\[\mathbf{x} = (x, \frac{dx}{dn}, \frac{d²x}{dn²}, ... ) \]
@@ -90,13 +90,13 @@
 <br>And the final estimate of \(q\):
 <br>\[\hat{q}^{n} =  y^n + (\bar{x}^{n} - \bar{y}^{n}) + (\bar{\Delta x}^{n} - \bar{\Delta y}^{n}) + (\bar{\Delta² x}^{n} - \bar{\Delta² y}^{n}) + ...\]
 <br><br></div>
-<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<div class="mdl-card__supporting-text no-padding ">
 <h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 1</h5>
 <br><div class="mdl-card__media">
 <img class="article-image" src=" images/blog/complementary/derivative.png" border="0" alt="">
 </div><br>The estimate sticks more with the tendency of sensor \(X\).
 <br></div>
-<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+<div class="mdl-card__supporting-text no-padding ">
 <h5 class="mdl-cell mdl-cell--12-col"> Simulation at order 2</h5>
 <br><div class="mdl-card__media">
 <img class="article-image" src=" images/blog/complementary/2derivatives.png" border="0" alt="">

@@ -22,7 +22,9 @@ PAGES = {"index.md": "Home",
          "drawing.md": "Drawings",
          "about.md": "About",
          "nori.md": None,
-         "complementary_state_estimation.md" : None}
+         "complementary_state_estimation.md" : None,
+         "theremtablet.md": None,
+         "avali3D.md": None}
 
 
 def parse_md(md_txt):
@@ -30,11 +32,13 @@ def parse_md(md_txt):
     intextbox = False
     textbox_buf = ''
 
+    N = 0
     for line in md_txt.split("\n"):
         if line.startswith("//"):
             continue
 
         if intextbox and not line.startswith("[endtextbox]"):
+            print(N, "-", line)
             textbox_buf += line + "\n"
             continue
 
@@ -49,16 +53,19 @@ def parse_md(md_txt):
                 continue
 
             if line.startswith("[starttextbox]"):
+                N += 1
                 textbox_buf = ''
                 intextbox = True
                 continue
 
             if line.startswith("[endtextbox]"):
+                print("a")
                 intextbox = False
                 body += textbox_parse(textbox_buf)
                 continue
 
             if line.startswith("[imagebox]"):
+                print("imagebox")
                 image_path = line.split("(")[1].split(")")[0]
                 with open("./imagebox.html", "r") as f_in:
                     imagebox_html = f_in.read().replace("IMAGE_PATH", image_path)

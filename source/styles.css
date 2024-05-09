@@ -308,62 +308,62 @@ body {
 
 @media (min-width:320px)  {
   video {
-    width: 320px;
+    max-width: 320px;
     height: 180px;
   }
   .video-card {
-    width: 320px;
+    max-width: 320px;
     height: 180px;
   }
 }
 
 @media (min-width:481px)  {
   video {
-    width: 320px;
+    max-width: 320px;
     height: 180px;
   }
   .video-card {
-    width: 320px;
+    max-width: 320px;
     height: 180px;
   }
 }
 @media (min-width:641px)  {
   video {
-    width: 640px;
+    max-width: 640px;
     height: 360px;
   }
   .video-card {
-    width: 640px;
+    max-width: 640px;
     height: 360px;
   }
 }
 @media (min-width:961px)  {
   video {
-    width: 854px;
+    max-width: 854px;
     height: 480px;
   }
   .video-card {
-    width: 854px;
+    max-width: 854px;
     height: 480px;
   }
 }
 @media (min-width:1025px) {
   video {
-    width: 854px;
+    max-width: 854px;
     height: 480px;
   }
   .video-card {
-    width: 854px;
+    max-width: 854px;
     height: 480px;
   }
 }
 @media (min-width:1281px) {
   video {
-    width: 854px;
+    max-width: 854px;
     height: 480px;
   }
   .video-card {
-    width: 854px;
+    max-width: 854px;
     height: 480px;
   }
 }

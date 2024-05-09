@@ -1,0 +1,247 @@
+<!doctype html>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Jonathan Julou's portfolio website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Jonathan Julou</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">Jonathan Julou</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link" href="blog.html">Blog</a><a class="mdl-navigation__link" href="projects.html">Projects</a><a class="mdl-navigation__link" href="music.html">Music</a><a class="mdl-navigation__link" href="drawing.html">Drawings</a><a class="mdl-navigation__link" href="about.html">About</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link" href="blog.html">Blog</a><a class="mdl-navigation__link" href="projects.html">Projects</a><a class="mdl-navigation__link" href="music.html">Music</a><a class="mdl-navigation__link" href="drawing.html">Drawings</a><a class="mdl-navigation__link" href="about.html">About</a>
+            </nav>
+        </div>
+<main class="mdl-layout__content">
+<div class="mdl-grid portfolio-max-width">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+<br><div class="mdl-card__media">
+<img class="article-image" src=" images/projects/avali3D/Sans Titre.jpg" border="0" alt="">
+</div><br><div class="mdl-grid portfolio-copy">
+<h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Avali 3D model + rig</h3>
+<div class="mdl-card__supporting-text no-padding ">
+<br>This project was made over the course of almost a year in Blender, going from concept to sculpting to retopology to texturing and procedural materials and finally rigging and animating.
+<br><br></div>
+<div class="mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col">Concept</h5>
+The idea was to make a 3D model based on the Avali open species by RyuujinZero (<a href=https://avali.fandom.com/wiki/Art_%26_Concepts>https://avali.fandom.com/wiki/Art_%26_Concepts</a>) that would be as photorealistic as possible with my skills, as a way to improve on them.
+<br><br>A lot of drawings were made to understand how to build similar 2D forms from basic 3D shapes on paper. This one resembles the most the final outcome and was an inspiration to one of the animations:
+<br><br></div>
+</div>
+<br></div>
+</div>
+<div class="mdl-grid portfolio-max-width"><!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/20230913_093120.jpg" border="2" alt="">
+    </div>
+</div>
+</div><div class="mdl-grid portfolio-max-width">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+<div class="mdl-grid portfolio-copy">
+<div class="mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col">3D model</h5>
+After sculpting using drawings as references, a retopology of the mesh was made manually. There are many automatic retopology tools that work well for hard surfaces and static objects, but for an animated character, topology has to follow the planned deformations, for example giving more edge loops on the elbows to plan for extension, while following the angle of rotation to avoid shearing artifacts.
+<br><br>The hardest part is the face to account for the eyes and mouth, as well as the four ears. In the end the ears were kept as separate objects for ease of rigging, the intersection being hidden by the helmet anyways.
+<br><br>After the retopology of the main body, the armor was modelled directly on top by extruding parts of the body topology or layering planes on top with the shrinkwrap modifier. Some elemnts like the gun and the pouch were made separately, but still with direct low-poly modelling.
+<br><br>I foung going high-poly to low poly with retopology to work the best for organic shapes, to keep freedom of shape at sculpting stage, and then applying good topology on the pre-existing shape at retopo stage, so that one can focus on a single problem at a time. For hard-surface objects, low poly to high-poly was the fastest since the shapes are simpler and topology is not as important for animation.
+<br><br></div>
+</div>
+<br></div>
+</div>
+<div class="mdl-grid portfolio-max-width"><!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/topo3.jpg" border="2" alt="">
+    </div>
+</div>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/topo4.jpg" border="2" alt="">
+    </div>
+</div>
+</div><div class="mdl-grid portfolio-max-width"><!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/topo1.jpg" border="2" alt="">
+    </div>
+</div>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/topo2.jpg" border="2" alt="">
+    </div>
+</div>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/topo5.jpg" border="2" alt="">
+    </div>
+</div>
+</div><div class="mdl-grid portfolio-max-width">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+<div class="mdl-grid portfolio-copy">
+<div class="mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col">Shading</h5>
+Besides the feathers and some hand-painted masks, no texture was used. All shaders were achieved using noise patterns like Perlin and Voronoi in the Blender shader editor. It gives more control on the aspect of the surface and avoids having to deal with seams, vut it is much harder to achieve a PBR look.
+<br><br>The wings look terrible compared to the rest, and were a mess to try rigging, hence why they were removed for the animations. In a future project, a feather-by-fezather approach would be more appropriate rather than sticking with faking using textures.
+<br><br></div>
+</div>
+<br></div>
+</div>
+<div class="mdl-grid portfolio-max-width"><!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/untitled.jpg" border="2" alt="">
+    </div>
+</div>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/untitled2.jpg" border="2" alt="">
+    </div>
+</div>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="mdl-cell">
+    <div class="mdl-card__media">
+        <img class="article-image" src=" images/projects/avali3D/untitled3.jpg" border="2" alt="">
+    </div>
+</div>
+</div><div class="mdl-grid portfolio-max-width">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+<div class="mdl-grid portfolio-copy">
+<div class="mdl-card__supporting-text no-padding ">
+<h5 class="mdl-cell mdl-cell--12-col">Animation</h5>
+Finally in parallel to the model reaching its final appearance, the IBC deadline was closing by at work, so I offered to use this personnal project for the demo.
+<br><br>The animation was made with said demo in mind. The idea was to have a cube in the scene, a real cube, and then show a virtual character interacting with the cube, like going on top, in fornt, behind, projecting shadows on the cube, etc...
+This was to demonstrate that real-time pixel-perfect tracking was possible using mechanical encoders and a well-calibrated lens.
+<br><br>3 different animation cycles were keyframed by hand in blender and then exported as FBX to Unreal Engine. To interact with the cube, the virtual placeholder cube was given a holdout material in Composure, so that it still interacted with the scene ligthing and masked the character when behind, but didn't obstruct the real cube on screen.
+<br><br></div>
+</div>
+<br></div>
+</div>
+<div class="mdl-grid portfolio-max-width"><!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="video-card mdl-cell">
+        <video controls>
+            <source src="images/projects/avali3D/idle20001-1250.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+</div>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="video-card mdl-cell">
+        <video controls>
+            <source src="images/projects/avali3D/run0001-0180.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+</div>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+<div class="video-card mdl-cell">
+        <video controls>
+            <source src="images/projects/avali3D/active0001-0383.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+</div>
+</div><div class="mdl-grid portfolio-max-width">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+<div class="mdl-grid portfolio-copy">
+<div class="mdl-card__supporting-text no-padding ">
+<h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"> Demo at IBC</h3>
+</div>
+<div class="video-card mdl-card__media">
+<video controls><source src=" images/projects/avali3D/IMG_4676.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div></div>
+<br></div>
+</div>
+</main>
+<!--
+  Based on Material Design Lite Portfolio example
+-->
+
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Jonathan Julou</div>
+
+
+
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                  <p>
+                    <a href="https://github.com/jonathanjulou"><img src="./images/gh.png" alt="github" style="width:32px;height:32px;padding: 0 0 0 20px;"></img></a>
+                    <a href="mailto:jonathan.julou@protonmail.com"><img src="./images/mail.png" alt="mail" style="width:48px;height:32px;padding: 0 0 0 20px;"></img></a>
+                  </p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

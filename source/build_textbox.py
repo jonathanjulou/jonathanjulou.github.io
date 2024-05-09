@@ -42,8 +42,12 @@ def textbox_parse(md_content):
             body += '</div>\n'
             continue
 
-        if line.startswith("[startparagraph]"):
+        if line.startswith("[startparagraphcell]"):
             body += '<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">\n'
+            continue
+
+        if line.startswith("[startparagraph]"):
+            body += '<div class="mdl-card__supporting-text no-padding ">\n'
             continue
 
         if line.startswith("[endparagraph]"):

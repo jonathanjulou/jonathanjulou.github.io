@@ -1,5 +1,5 @@
 [startgrid]
 
-[portfoliobox](Compensating the latency issue in complementary filters with basic differential state estimation; ;images/projects/IRL.jpg; complementary_state_estimation.html)
+[portfoliobox](Compensating the latency issue in complementary filters with basic differential state estimation; ;images/blog/complementary/basic.png; complementary_state_estimation.html)
 
 [endgrid]
