@@ -36,10 +36,10 @@ After sculpting using drawings as references, a retopology of the mesh was made 
 The hardest part is the face to account for the eyes and mouth, as well as the four ears. In the end the ears were kept as separate objects for ease of rigging, the intersection being hidden by the helmet anyways.
 
 
-After the retopology of the main body, the armor was modelled directly on top by extruding parts of the body topology or layering planes on top with the shrinkwrap modifier. Some elemnts like the gun and the pouch were made separately, but still with direct low-poly modelling.
+After the retopology of the main body, the armor was modeled directly on top by extruding parts of the body topology or layering planes on top with the shrinkwrap modifier. Some elements like the gun and the pouch were made separately, but still with direct low-poly modeling.
 
 
-I foung going high-poly to low poly with retopology to work the best for organic shapes, to keep freedom of shape at sculpting stage, and then applying good topology on the pre-existing shape at retopo stage, so that one can focus on a single problem at a time. For hard-surface objects, low poly to high-poly was the fastest since the shapes are simpler and topology is not as important for animation.
+I found going high-poly to low poly with retopology to work the best for organic shapes, to keep freedom of shape at sculpting stage, and then applying good topology on the pre-existing shape at retopo stage, so that one can focus on a single problem at a time. For hard-surface objects, low poly to high-poly was the fastest since the shapes are simpler and topology is not as important for animation.
 
 
 [endparagraph]
@@ -61,10 +61,10 @@ I foung going high-poly to low poly with retopology to work the best for organic
 [startgrid]
 [startparagraph]
 ####Shading
-Besides the feathers and some hand-painted masks, no texture was used. All shaders were achieved using noise patterns like Perlin and Voronoi in the Blender shader editor. It gives more control on the aspect of the surface and avoids having to deal with seams, vut it is much harder to achieve a PBR look.
+Besides the feathers and some hand-painted masks, no texture was used. All shaders were achieved using noise patterns like Perlin and Voronoi in the Blender shader editor. It gives more control on the aspect of the surface and avoids having to deal with seams, but it is much harder to achieve a PBR look.
 
 
-The wings look terrible compared to the rest, and were a mess to try rigging, hence why they were removed for the animations. In a future project, a feather-by-fezather approach would be more appropriate rather than sticking with faking using textures.
+The wings look terrible compared to the rest, and were a mess to try rigging, hence why they were removed for the animations. In a future project, a feather-by-feather approach would be more appropriate rather than sticking with faking using textures.
 
 
 [endparagraph]
