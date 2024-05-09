@@ -1,6 +1,6 @@
 [starttextbox]
 
-[image](images/projects/avali3D/Sans Titre.jpg)
+[image](images/projects/avali3D/Sanstitre.jpg)
 
 [startgrid]
 ###Avali 3D model + rig
